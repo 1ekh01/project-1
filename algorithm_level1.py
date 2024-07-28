@@ -36,37 +36,37 @@ def BFS(matrix, start, goal):
     return []
 
 # DFS
-def DFS(city_map, start, goal):
-    movements = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+def DFS(matrix, start, goal):
+    n = len(matrix)
+    m = len(matrix[0])
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    
     stack = [start]
+    came_from = {}
+    came_from[start] = None
     visited = set()
-    parent = {}
     
     while stack:
         current = stack.pop()
         if current == goal:
-            break
+            path = []
+            while current:
+                path.append(current)
+                current = came_from[current]
+            path.reverse()
+            return path
         
-        for move in movements:
-            next_cell = (current[0] + move[0], current[1] + move[1])
+        if current not in visited:
+            visited.add(current)
             
-            if (0 <= next_cell[0] < len(city_map) and 
-                0 <= next_cell[1] < len(city_map[0]) and 
-                city_map[next_cell[0]][next_cell[1]] != -1 and
-                next_cell not in visited):
-                
-                stack.append(next_cell)
-                visited.add(next_cell)
-                parent[next_cell] = current
+            for direction in directions:
+                neighbor = (current[0] + direction[0], current[1] + direction[1])
+                if 0 <= neighbor[0] < n and 0 <= neighbor[1] < m and matrix[neighbor[0]][neighbor[1]] != '-1':
+                    if neighbor not in visited and neighbor not in stack:
+                        stack.append(neighbor)
+                        came_from[neighbor] = current
 
-    path = []
-    if goal in parent:
-        path.append(goal)
-        while path[-1] != start:
-            path.append(parent[path[-1]])
-        path.reverse()
-    
-    return path
+    return []
 
 # UCS
 def UCS(matrix, start, goal):

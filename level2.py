@@ -17,7 +17,7 @@ def process_file_level2(filename):
 
 def level2(directory):
     files = [f for f in os.listdir(directory) if f.startswith('input') and '_level2.txt' in f]
-    files.sort()  # Ensure files are sorted if necessary
+    files.sort()
     
     for idx, file in enumerate(files, 1):
         print(f"{idx}. {file}")

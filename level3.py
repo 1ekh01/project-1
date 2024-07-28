@@ -22,7 +22,7 @@ def process_file_level3(filename):
 
 def level3(directory):
     files = [f for f in os.listdir(directory) if f.startswith('input') and '_level3.txt' in f]
-    files.sort()  # Ensure files are sorted if necessary
+    files.sort()
 
     print("Available files:")
     for idx, filename in enumerate(files):

@@ -1,7 +1,7 @@
 from collections import deque
 import heapq
 
-# Heuristic func
+# Heuristic function
 def heuristics(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
 

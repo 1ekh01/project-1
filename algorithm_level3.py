@@ -45,32 +45,3 @@ def bfs_level3(matrix, start, goal, max_time, toll_booths, max_fuel, fuel_statio
                         came_from[new_state] = (current, current_fuel)
 
     return []
-
-# Test main function for Level 3
-# def main_level3():
-#     matrix = [
-#         [0, 0, 0, 0, -1, -1, 0, 0, 0, 0],
-#         [0, 0, 0, 0, 0, 0, 0, -1, 0, -1],
-#         [0, 0, -1, -1, -1, 0, 0, -1, 0, -1],
-#         [0, 0, 0, 0, -1, 0, 0, -1, 0, 0],
-#         [0, 0, -1, -1, -1, 0, 0, -1, -1, 0],
-#         [0, 0, -1, 0, 0, 0, 0, 0, -1, 0],
-#         [0, 0, 0, 0, -1, 0, -1, 0, -1, 0],
-#         [0, 0, 0, 0, -1, 0, 0, 0, 0, 0],
-#         [0, -1, -1, -1, -1, 0, 0, 0, 0, 0],
-#         [0, 0, 0, 0, 0, 0, -1, -1, -1, 0]
-#     ]
-#     start = (1, 1)
-#     goal = (7, 8)
-#     max_time = 20
-#     toll_booths = {(5, 0): 1, (6, 5): 4, (6, 7): 8, (9, 2): 5}
-#     max_fuel = 10
-#     fuel_stations = {(6, 2): 1}
-    
-#     path = bfs_level3(matrix, start, goal, max_time, toll_booths, max_fuel, fuel_stations)
-#     if path:
-#         print("Level 3 Path:", path)
-#     else:
-#         print("No path found within the given constraints.")
-
-# main_level3()

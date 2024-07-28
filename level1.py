@@ -31,7 +31,7 @@ def process_file(filename):
 
 def level1(directory):
     files = [f for f in os.listdir(directory) if f.startswith('input') and '_level1.txt' in f]
-    files.sort()  # Ensure files are sorted if necessary
+    files.sort()
 
     print("Available files:")
     for idx, filename in enumerate(files):

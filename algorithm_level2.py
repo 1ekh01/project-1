@@ -88,17 +88,3 @@ def print_path_level2(path, time_spent):
             print(node, end=" -> ")
         print("Goal")
         print(f"Time spent: {time_spent} minutes")
-
-
-# testing level 2
-# filename = 'input1_level1.txt'
-# n, m, t, f, matrix = r.read_input(filename)
-# positions = r.find_positions(matrix, n, m)
-# start = positions['S1']
-# goal = positions['G1']
-
-# if start and goal:
-#     path, time_spent = A_star_level2(matrix, start, goal, t)
-#     print_path_level2(path, time_spent)
-# else:
-#     print("Start or goal position not found in the matrix.")

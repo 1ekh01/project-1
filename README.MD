@@ -6,8 +6,8 @@ Project to find the path from the delivery vehicle to the customer.
 
 Members' information:
 
-1. Nguyễn Thế Trung - 22127429
-2. Cao Phạm Hoàng Thái - 22127382'
+1. Nguyễn Thế Trung - 22127429 (C)
+2. Cao Phạm Hoàng Thái - 22127382
 3. Bùi Lê Khôi - 22127205
 4. Nguyễn Gia Phúc - 22127331
 
